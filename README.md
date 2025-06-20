@@ -40,7 +40,7 @@ A clean, offline-capable web application for monitoring Kaspa cryptocurrency wal
 ### Push Notifications (Optional)
 1. Download the [Pushcut app](https://pushcut.io) on your iOS device
 2. Create a notification in Pushcut and note the name
-3. Get your API key from Pushcut settings
+3. Get your API key from Pushcut settings (unfortunately to run any APIs pushcut requires the pro subscription which is $1.99 a month)
 4. Enter both in the app and test the connection
 
 ### Supported Wallets
@@ -140,4 +140,4 @@ This tool is for informational purposes only. Always verify balances through off
 
 ---
 
-**Built with ❤️ for the Kaspa community**
+**Built with ❤️ for the Kaspa community** donate: kaspa:qrt6u3q6nkqgjcuamnrp7z6pctss2hjsfa43c2lz7ajklydzca2fglhpqjdwl
