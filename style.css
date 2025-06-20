@@ -1,0 +1,410 @@
+/* Classic HTML-style CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: white;
+    color: black;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+}
+
+h2 {
+    color: black;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+h3 {
+    color: black;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: black;
+    font-weight: bold;
+}
+
+.wallet-dropdown,
+.text-input {
+    width: 100%;
+    padding: 10px;
+    background: white;
+    color: black;
+    border: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.wallet-dropdown:focus,
+.text-input:focus {
+    outline: none;
+    border-color: #666;
+}
+
+.wallet-dropdown option {
+    background: white;
+    color: black;
+    padding: 10px;
+}
+
+.btn {
+    padding: 12px 24px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin: 5px;
+}
+
+.btn-primary {
+    background: #ddd;
+    color: black;
+    border-color: #ccc;
+}
+
+.btn-primary:hover {
+    background: #bbb;
+    color: black;
+}
+
+.btn-secondary {
+    background: white;
+    color: black;
+    border-color: #ccc;
+}
+
+.btn-secondary:hover {
+    background: #f0f0f0;
+    color: black;
+}
+
+.btn-accent {
+    background: #e0e0e0;
+    color: black;
+    border-color: #ccc;
+}
+
+.btn-accent:hover {
+    background: #c0c0c0;
+    color: black;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.custom-wallet-hidden {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.wallet-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.balance-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.balance-display {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.balance-label {
+    color: black;
+}
+
+.balance-amount {
+    color: black;
+    font-weight: bold;
+    font-size: 1.2em;
+    cursor: help;
+}
+
+.balance-amount[title] {
+    position: relative;
+}
+
+.balance-amount[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    border: 1px solid #ccc;
+    padding: 0.5px 1.5px;
+    white-space: nowrap;
+    font-size: 0.5em;
+    font-weight: normal;
+    z-index: 1000;
+    pointer-events: none;
+    margin-bottom: 2px;
+}
+
+
+
+.balance-change {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+}
+
+.balance-change.positive {
+    color: green;
+    background: #f0f8f0;
+    border: 1px solid green;
+}
+
+.balance-change.negative {
+    color: red;
+    background: #f8f0f0;
+    border: 1px solid red;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.timer-display {
+    color: black;
+    font-size: 1.1em;
+}
+
+.countdown {
+    color: black;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.status-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+}
+
+.last-updated {
+    color: #666;
+}
+
+.status-indicator {
+    font-size: 1.5em;
+}
+
+.status-indicator.online {
+    color: green;
+}
+
+.status-indicator.offline {
+    color: red;
+}
+
+.pushcut-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.pushcut-status {
+    margin-top: 15px;
+    padding: 8px 12px;
+    background: #f0f8f0;
+    border: 1px solid green;
+    color: green;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.pushcut-status.error {
+    background: #fff0f0;
+    border-color: red;
+    color: red;
+}
+
+.pushcut-status .status-indicator {
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.version {
+    text-align: center;
+    font-size: 0.7em;
+    color: #999;
+    margin-top: 5px;
+}
+
+.support-message {
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.8em;
+    color: #666;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .wallet-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .pushcut-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin: 5px;
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .balance-display {
+        font-size: 1.2em;
+    }
+
+    section {
+        padding: 15px;
+    }
+}
+
+/* Loading animation */
+.loading {
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
+
+/* Notification styles */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    color: black;
+    font-weight: bold;
+    z-index: 1000;
+    animation: slideIn 0.3s ease;
+    background: white;
+    border: 1px solid #ccc;
+}
+
+.notification.success {
+    background: #f0f8f0;
+    border: 1px solid green;
+    color: green;
+}
+
+.notification.error {
+    background: #f8f0f0;
+    border: 1px solid red;
+    color: red;
+}
+
+.notification.info {
+    background: #f0f0f8;
+    border: 1px solid blue;
+    color: blue;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}

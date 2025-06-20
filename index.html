@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaspa Wallet Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Kaspa Wallet Tracker</h1>
+            <div class="version">version 2.0</div>
+        </header>
+
+        <main>
+            <!-- Wallet Selection Section -->
+            <section class="wallet-section">
+                <h2>Select Wallet</h2>
+                <div class="form-group">
+                    <label for="walletSelect">Choose Wallet:</label>
+                    <select id="walletSelect" class="wallet-dropdown">
+                        <option value="">-- Select a Wallet --</option>
+                        <option value="kaspa:qpzpfwcsqsxhxwup26r55fd0ghqlhyugz8cp6y3wxuddc02vcxtjg75pspnwz">MEXC Wallet</option>
+                        <option value="kaspa:qpz2vgvlxhmyhmt22h538pjzmvvd52nuut80y5zulgpvyerlskvvwm7n4uk5a">Wallet #2</option>
+                        <option value="kaspa:qzxrs8gxjgk2q84wlt3xfd057ntws73fptalhy84g85zqfu5lcemvpu04vj3w">Uphold Wallet</option>
+                        <option value="kaspa:qrvum29vk365g0zcd5gx3c7h829etfq2ytdmscjzw4zw04fjfnprcg9c3tges">Bybit Wallet</option>
+                        <option value="kaspa:ppk66xua7nmq8elv3eglfet0xxcfuks835xdgsm5jlymjhazyu6h5ac62l4ey">DAGKnight Fund Wallet</option>
+                        <option value="kaspa:qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqkx9awp4e">Burn Address Wallet</option>
+                        <option value="custom">Custom Wallet</option>
+                    </select>
+                </div>
+
+                <!-- Custom Wallet Input (hidden by default) -->
+                <div id="customWalletSection" class="form-group custom-wallet-hidden">
+                    <label for="customAddress">Custom Wallet Address:</label>
+                    <input type="text" id="customAddress" placeholder="kaspa:..." class="text-input">
+                    <label for="customLabel">Custom Wallet Label (optional):</label>
+                    <input type="text" id="customLabel" placeholder="My Wallet" class="text-input">
+                </div>
+
+                <button id="connectWallet" class="btn btn-primary">Connect Wallet</button>
+            </section>
+
+            <!-- Wallet Info Section (hidden by default) -->
+            <section id="walletInfo" class="wallet-info hidden">
+                <div class="wallet-header">
+                    <h3 id="walletName">Wallet Name</h3>
+                    <button id="disconnectWallet" class="btn btn-secondary">Disconnect</button>
+                </div>
+                
+                <div class="balance-container">
+                    <div class="balance-display">
+                        <span class="balance-label">Current Balance:</span>
+                        <span id="currentBalance" class="balance-amount">0.00 KAS</span>
+                    </div>
+                    <div id="balanceChange" class="balance-change hidden"></div>
+                </div>
+
+                <div class="controls">
+                    <button id="refreshButton" class="btn btn-primary">Refresh Now</button>
+                    <div class="timer-display">
+                        <span>Next update in: </span>
+                        <span id="countdown" class="countdown">2:30</span>
+                    </div>
+                </div>
+
+                <div class="status-display">
+                    <span id="lastUpdated" class="last-updated">Never updated</span>
+                    <span id="connectionStatus" class="status-indicator">●</span>
+                </div>
+            </section>
+
+            <!-- Pushcut Integration Section -->
+            <section class="pushcut-section">
+                <h2>Pushcut Notifications</h2>
+                <div class="form-group">
+                    <label for="pushcutTitle">Custom Notification Title (optional):</label>
+                    <input type="text" id="pushcutTitle" placeholder="Default: Kaspa Wallet Update" class="text-input">
+                </div>
+                <div class="form-group">
+                    <label for="pushcutApiKey">Pushcut API Key:</label>
+                    <input type="password" id="pushcutApiKey" placeholder="Enter your Pushcut API key found in Account > Integrations > API key" class="text-input">
+                </div>
+                <div class="form-group">
+                    <label for="pushcutNotificationName">Notification Name:</label>
+                    <input type="text" id="pushcutNotificationName" placeholder="Must match &quot;Name&quot; field in Pushcuts directly above 'Enabled' Toggle" class="text-input">
+                </div>
+                <div class="pushcut-buttons">
+                    <button id="testNotification" class="btn btn-accent">Test Notification</button>
+                    <button id="resetApiKey" class="btn btn-secondary">Reset API Key</button>
+                </div>
+                <div id="pushcutStatus" class="pushcut-status hidden">
+                    <span class="status-indicator" id="pushcutIndicator">●</span>
+                    <span class="status-text" id="pushcutStatusText">Pushcut notifications ready</span>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="support-message">
+                ❤️ Support my work: kaspa:qrt6u3q6nkqgjcuamnrp7z6pctss2hjsfa43c2lz7ajklydzca2fglhpqjdwl
+            </div>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
