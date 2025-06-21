@@ -1,4 +1,4 @@
-# Kaspa Wallet Tracker
+# Kaspa Wallet Tracker - support my work ❤️ kaspa:qrt6u3q6nkqgjcuamnrp7z6pctss2hjsfa43c2lz7ajklydzca2fglhpqjdwl
 
 A clean, offline-capable web application for monitoring Kaspa cryptocurrency wallet balances with real-time notifications.
 
@@ -36,11 +36,15 @@ A clean, offline-capable web application for monitoring Kaspa cryptocurrency wal
 - Or select "Custom Wallet" to enter your own Kaspa address
 - Click "Connect Wallet" to start monitoring
 
-### Push Notifications (Optional)
+### Push Notifications on iOS device
 1. Download the [Pushcut app](https://pushcut.io) on your iOS device
-2. Create a notification in Pushcut and note the name
-3. Get your API key from Pushcut settings
-4. Enter both in the app and test the connection
+2. Create a notification in Pushcut. "Notification Title" and "Notification Text" can remain blank, or kept as is
+3. Get your API key from Pushcut settings (unfortunately Pushcut requires the pro subscription which is $1.99, without it you cant call APIs)
+4. Enter the API key found in Pushcut settings into the html file in the API text box
+5. In Pushcut, edit the notification you created and find the "Name" field which is right above the "Enabled" toggle at the very top. Whatever you put there must be put in the "Notification Name" field in the html file (case sensitive)
+6. "Custom Notification Title (optional)": text that will show at the very top of the pushcuts notification banner. If left blank will default to "Kaspa Wallet Update". Either option will show the wallet label + KAS balance change
+7. Click "Test Notification" and if y0ur phone receives an alert you are connected. Choose a wallet and its good to go and will alert you every 2:30 if there is a positive balance change, or force an update with the "refresh now" button
+   
 
 ### Supported Wallets
 - **MEXC Wallet**: Major exchange wallet
@@ -139,4 +143,4 @@ This tool is for informational purposes only. Always verify balances through off
 
 ---
 
-**Built with ❤️ for the Kaspa community**
+**Built with ❤️ for the Kaspa community** support my work ❤️ kaspa:qrt6u3q6nkqgjcuamnrp7z6pctss2hjsfa43c2lz7ajklydzca2fglhpqjdwl
